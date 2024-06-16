@@ -26,9 +26,9 @@ public class TaskManager {
 
         for (Task task : tasks) {
             String date = task.getDate();
-            // Assuming date format is "dd/MM/yyyy"
-            if (date.length() >= 7) { // Check if date string is long enough to extract month/year
-                String monthYear = date.substring(3, 10); // Extracts "MM/yyyy"
+
+            if (date.length() >= 7) {
+                String monthYear = date.substring(3, 10);
 
                 int time = task.getTime();
 

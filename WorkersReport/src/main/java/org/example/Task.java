@@ -13,7 +13,7 @@ public class Task {
         this.workerName = workerName;
     }
 
-    // Getters and setters (including for the new field)
+
     public String getDate() {
         return date;
     }

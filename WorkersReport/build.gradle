@@ -27,11 +27,8 @@ jar {
     manifest {
         attributes 'Main-Class': 'org.example.Main'
     }
-    // Include dependencies in the JAR file
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
-
-    // Handle duplicate entries in META-INF/LICENSE
     duplicatesStrategy = 'exclude'
 }
