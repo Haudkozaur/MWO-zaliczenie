@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         try {
-            String directoryPath = "C:\\Users\\Julian Haudek\\Java_training\\faktura\\MWO_JH_zaliczenie\\src\\main\\resources";
+            String directoryPath = "C:\\Users\\Julian Haudek\\Desktop\\mwo_zaliczenie\\WorkersReport\\MWO-zaliczenie\\WorkersReport\\src\\main\\resources";
             ExcelReader reader = new ExcelReader();
             List<Task> tasks = reader.readExcelFiles(directoryPath);
 

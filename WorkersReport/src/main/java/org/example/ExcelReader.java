@@ -11,12 +11,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ExcelReader {
     public List<Task> readExcelFiles(String directoryPath) {
         List<Task> tasks = new ArrayList<>();
-        try {
-            List<Path> files = Files.list(Paths.get(directoryPath))
+        try (Stream<Path> paths = Files.walk(Paths.get(directoryPath))) {
+            List<Path> files = paths
+                    .filter(Files::isRegularFile)
                     .filter(path -> path.toString().endsWith(".xls") || path.toString().endsWith(".xlsx"))
                     .collect(Collectors.toList());
 
