@@ -4,14 +4,16 @@ public class Task {
     private String date;
     private String quest;
     private int time;
+    private String workerName; // New field
 
-    public Task(String date, String quest, int time) {
+    public Task(String date, String quest, int time, String workerName) {
         this.date = date;
         this.quest = quest;
         this.time = time;
+        this.workerName = workerName;
     }
 
-    // Getters and Setters
+    // Getters and setters (including for the new field)
     public String getDate() {
         return date;
     }
@@ -36,12 +38,21 @@ public class Task {
         this.time = time;
     }
 
+    public String getWorkerName() {
+        return workerName;
+    }
+
+    public void setWorkerName(String workerName) {
+        this.workerName = workerName;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
                 "date='" + date + '\'' +
                 ", quest='" + quest + '\'' +
                 ", time=" + time +
+                ", workerName='" + workerName + '\'' + // Include new field
                 '}';
     }
 }
