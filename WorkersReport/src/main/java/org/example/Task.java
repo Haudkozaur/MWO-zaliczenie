@@ -1,10 +1,10 @@
 package org.example;
 
 public class Task {
-    private String date;
-    private String quest;
-    private int time;
-    private String workerName; // New field
+        private String date;
+        private String quest;
+        private int time;
+        private String workerName;
 
     public Task(String date, String quest, int time, String workerName) {
         this.date = date;
